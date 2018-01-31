@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>This is Flask Demo</title>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0 auto;
+            background-color: skyblue;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        div.show-msg {
+            top:100px;
+            position:relative;
+            font-size: 18px;
+            color:white;
+            text-align: center;
+            width:60%;
+            height:300px;
+        }
+
+        div.logined {
+            position:absolute;
+            left:30%;
+            top: 50px;
+            width: 40%;
+            height: 200px;
+            line-height: 186px;
+        }
+
+
+        div.logining {
+            position: absolute;
+            left: 30%;
+            top: 50px;
+            width: 40%;
+            height: 200px;
+            line-height: 186px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Welcome Flask Web</h1>
+    <div class="show-msg">
+        {% if name %}
+        <div class="logined">
+            <h1>你好 {{ name }}</h1>
+        </div>
+        {% else %}
+        <div class="logining">
+            <h1>你好世界</h1>
+            <p>未登录<a href="/login/">请登录</a></p>
+            <p>未注册<a href="/register/">请注册</a></p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

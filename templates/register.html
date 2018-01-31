@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+</head>
+<body>
+    {% for message in get_flashed_messages() %}
+        {{ message }}
+    {% endfor %}
+    <form action="/user/register/" method="post">
+        用户名: <input type="text" name="name">
+        密  码: <input type="password" name="password">
+        密码验证: <input type="password" name="chil-pw">
+        <input type="submit">
+    </form>
+</body>
+</html>
